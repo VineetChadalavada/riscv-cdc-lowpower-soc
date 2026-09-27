@@ -1,0 +1,60 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sat Sep 26 21:30:27 2026
+| Host         : Vineet running 64-bit major release  (build 9200)
+| Command      : report_cdc -details -file E:/riscv-cdc-lowpower-soc/vivado/reports/cdc.rpt
+| Design       : minisoc_top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID     Severity  Count  Description
+-----  --------  -----  -------------------------------------------------------
+CDC-3  Info          5  1-bit synchronized with ASYNC_REG property
+CDC-9  Info          2  Asynchronous reset synchronized with ASYNC_REG property
+
+ID      Waived Endpoints  
+------  ----------------  
+CDC-6                  8  
+CDC-15                72  
+
+Note: for multi-bits checks, the reported number is the number of waived endpoints.
+
+Source Clock: clk_periph
+Destination Clock: clk_core
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                 Depth  Exception                Source (From)                 Destination (To)
+---  -----  --------  ------------------------------------------  -----  -----------------------  ----------------------------  ---------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  Max Delay Datapath Only  u_bridge/u_req/rbin_reg[2]/C  u_bridge/u_req/u_sync_r2w/meta_reg[2]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  Max Delay Datapath Only  u_bridge/u_rsp/wbin_reg[2]/C  u_bridge/u_rsp/u_sync_w2r/meta_reg[2]/D
+  3  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  Max Delay Datapath Only  u_timer/irq_reg/C             u_irq_sync/meta_reg[0]/D
+
+Source Clock: input port clock
+Destination Clock: clk_core
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                              Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  -------------------------------------------------------  -----  ----------  -------------  ---------------------
+  1  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      2  False Path  arst_n         u_rst_core/r0_reg/CLR
+
+Source Clock: clk_core
+Destination Clock: clk_periph
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                 Depth  Exception                Source (From)                 Destination (To)
+---  -----  --------  ------------------------------------------  -----  -----------------------  ----------------------------  ---------------------------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  Max Delay Datapath Only  u_bridge/u_req/wbin_reg[2]/C  u_bridge/u_req/u_sync_w2r/meta_reg[2]/D
+  2  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  Max Delay Datapath Only  u_bridge/u_rsp/rbin_reg[2]/C  u_bridge/u_rsp/u_sync_r2w/meta_reg[2]/D
+
+Source Clock: input port clock
+Destination Clock: clk_periph
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                              Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  -------------------------------------------------------  -----  ----------  -------------  -----------------------
+  1  CDC-9  Info      Asynchronous reset synchronized with ASYNC_REG property      2  False Path  arst_n         u_rst_periph/r0_reg/CLR
+

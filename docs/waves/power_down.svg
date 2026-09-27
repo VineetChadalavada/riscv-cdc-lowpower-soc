@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="380" viewBox="0 0 1070 380" font-family="Consolas, Menlo, monospace" font-size="12">
+<rect width="1070" height="380" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker></defs>
+<text x="12" y="22" font-size="15" font-weight="bold" fill="#1f2328" font-family="Segoe UI, Helvetica, Arial, sans-serif">Power-down sequence</text>
+<text x="12" y="40" font-size="12" fill="#57606a" font-family="Segoe UI, Helvetica, Arial, sans-serif">From tb_power: after software asks to sleep, one step per clock. Isolation first, then clock, reset, and power.</text>
+<line x1="220.7" y1="58" x2="220.7" y2="334" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="220.7" y="348" text-anchor="middle" fill="#57606a" font-size="10">1780 ns</text>
+<line x1="343.6" y1="58" x2="343.6" y2="334" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="343.6" y="348" text-anchor="middle" fill="#57606a" font-size="10">1800 ns</text>
+<line x1="466.4" y1="58" x2="466.4" y2="334" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="466.4" y="348" text-anchor="middle" fill="#57606a" font-size="10">1820 ns</text>
+<line x1="589.3" y1="58" x2="589.3" y2="334" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="589.3" y="348" text-anchor="middle" fill="#57606a" font-size="10">1840 ns</text>
+<line x1="712.1" y1="58" x2="712.1" y2="334" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="712.1" y="348" text-anchor="middle" fill="#57606a" font-size="10">1860 ns</text>
+<line x1="835.0" y1="58" x2="835.0" y2="334" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="835.0" y="348" text-anchor="middle" fill="#57606a" font-size="10">1880 ns</text>
+<line x1="957.9" y1="58" x2="957.9" y2="334" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="957.9" y="348" text-anchor="middle" fill="#57606a" font-size="10">1900 ns</text>
+<text x="18" y="84" fill="#1f2328">clk_core (always on)</text>
+<line x1="190" y1="93" x2="1050" y2="93" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,70 220.7,70 220.7,86 220.7,86 251.4,86 251.4,70 251.4,70 282.1,70 282.1,86 282.1,86 312.9,86 312.9,70 312.9,70 343.6,70 343.6,86 343.6,86 374.3,86 374.3,70 374.3,70 405.0,70 405.0,86 405.0,86 435.7,86 435.7,70 435.7,70 466.4,70 466.4,86 466.4,86 497.1,86 497.1,70 497.1,70 527.9,70 527.9,86 527.9,86 558.6,86 558.6,70 558.6,70 589.3,70 589.3,86 589.3,86 620.0,86 620.0,70 620.0,70 650.7,70 650.7,86 650.7,86 681.4,86 681.4,70 681.4,70 712.1,70 712.1,86 712.1,86 742.9,86 742.9,70 742.9,70 773.6,70 773.6,86 773.6,86 804.3,86 804.3,70 804.3,70 835.0,70 835.0,86 835.0,86 865.7,86 865.7,70 865.7,70 896.4,70 896.4,86 896.4,86 927.1,86 927.1,70 927.1,70 957.9,70 957.9,86 957.9,86 988.6,86 988.6,70 988.6,70 1019.3,70 1019.3,86 1019.3,86 1050.0,86" fill="none" stroke="#6e7781" stroke-width="1.4"/>
+<text x="18" y="114" fill="#1f2328">gclk_core (to core)</text>
+<line x1="190" y1="123" x2="1050" y2="123" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,100 220.7,100 220.7,116 220.7,116 251.4,116 251.4,100 251.4,100 282.1,100 282.1,116 282.1,116 312.9,116 312.9,100 312.9,100 343.6,100 343.6,116 343.6,116 374.3,116 374.3,100 374.3,100 405.0,100 405.0,116 405.0,116 435.7,116 435.7,100 435.7,100 466.4,100 466.4,116 466.4,116 497.1,116 497.1,100 497.1,100 527.9,100 527.9,116 527.9,116 558.6,116 558.6,100 558.6,100 589.3,100 589.3,116 589.3,116 1050.0,116" fill="none" stroke="#6e7781" stroke-width="1.4"/>
+<text x="18" y="144" fill="#1f2328">PMU state</text>
+<line x1="190" y1="153" x2="1050" y2="153" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,138.0 193.0,130 371.3,130 374.3,138.0 371.3,146 193.0,146" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="282.1" y="142.0" text-anchor="middle" fill="#1f2328">RUN</text>
+<polygon points="374.3,138.0 377.3,130 432.7,130 435.7,138.0 432.7,146 377.3,146" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="405.0" y="142.0" text-anchor="middle" fill="#1f2328">DRAIN</text>
+<polygon points="435.7,138.0 438.7,130 494.1,130 497.1,138.0 494.1,146 438.7,146" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="466.4" y="142.0" text-anchor="middle" fill="#1f2328">ISOLATE</text>
+<polygon points="497.1,138.0 500.1,130 555.6,130 558.6,138.0 555.6,146 500.1,146" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="527.9" y="142.0" text-anchor="middle" fill="#1f2328">CLK_OFF</text>
+<polygon points="558.6,138.0 561.6,130 617.0,130 620.0,138.0 617.0,146 561.6,146" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="589.3" y="142.0" text-anchor="middle" fill="#1f2328">RESET</text>
+<polygon points="620.0,138.0 623.0,130 1047.0,130 1050.0,138.0 1047.0,146 623.0,146" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="835.0" y="142.0" text-anchor="middle" fill="#1f2328">OFF</text>
+<text x="18" y="174" fill="#1f2328">iso_en</text>
+<line x1="190" y1="183" x2="1050" y2="183" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,176 497.1,176 497.1,160 497.1,160 1050.0,160" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="204" fill="#1f2328">clk_en</text>
+<line x1="190" y1="213" x2="1050" y2="213" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,190 558.6,190 558.6,206 558.6,206 1050.0,206" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="234" fill="#1f2328">core reset_n</text>
+<line x1="190" y1="243" x2="1050" y2="243" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,220 620.0,220 620.0,236 620.0,236 1050.0,236" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="264" fill="#1f2328">pwr_on</text>
+<line x1="190" y1="273" x2="1050" y2="273" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,250 681.4,250 681.4,266 681.4,266 1050.0,266" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="294" fill="#1f2328">inside: imem_valid</text>
+<line x1="190" y1="303" x2="1050" y2="303" stroke="#eaeef2" stroke-width="1"/>
+<rect x="681.4" y="280" width="368.6" height="16" fill="#cf222e" fill-opacity="0.18" stroke="#cf222e" stroke-width="1"/>
+<text x="865.7" y="291" text-anchor="middle" fill="#cf222e" font-size="10">X</text>
+<polyline points="190.0,280 681.4,280" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="324" fill="#1f2328">outside: imem_valid</text>
+<line x1="190" y1="333" x2="1050" y2="333" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,310 497.1,310 497.1,326 497.1,326 1050.0,326" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<line x1="374.3" y1="54" x2="374.3" y2="334" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="377.3" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">sleep requested</text>
+<line x1="681.4" y1="54" x2="681.4" y2="334" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="684.4" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">power off</text>
+</svg>

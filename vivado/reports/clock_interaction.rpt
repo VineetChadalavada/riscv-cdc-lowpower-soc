@@ -1,0 +1,25 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sat Sep 26 21:30:27 2026
+| Host         : Vineet running 64-bit major release  (build 9200)
+| Command      : report_clock_interaction -file E:/riscv-cdc-lowpower-soc/vivado/reports/clock_interaction.rpt
+| Design       : minisoc_top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                            WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock              
+From Clock    To Clock      Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints              
+------------  ------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  -----------------------  
+clk_core      clk_core      rise - rise     1.57     0.00            0         3738            15.00  Clean                Timed                    
+clk_core      clk_periph    rise - rise    13.26     0.00            0           45            15.00  Ignored              Max Delay Datapath Only  
+clk_periph    clk_core      rise - rise    13.26     0.00            0           40            15.00  Ignored              Max Delay Datapath Only  
+clk_periph    clk_periph    rise - rise    22.86     0.00            0          785            27.00  Clean                Timed                    
+
+

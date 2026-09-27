@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="444" viewBox="0 0 1070 444" font-family="Consolas, Menlo, monospace" font-size="12">
+<rect width="1070" height="444" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker></defs>
+<text x="12" y="22" font-size="15" font-weight="bold" fill="#1f2328" font-family="Segoe UI, Helvetica, Arial, sans-serif">Async FIFO: one word crossing from a 10 ns clock to a 27 ns clock</text>
+<text x="12" y="40" font-size="12" fill="#57606a" font-family="Segoe UI, Helvetica, Arial, sans-serif">From tb_async_fifo (latency phase). The write pointer crosses as Gray code; rempty falls once it arrives. rdata is only meaningful while rempty is low.</text>
+<line x1="215.5" y1="58" x2="215.5" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="215.5" y="408" text-anchor="middle" fill="#57606a" font-size="10">280 ns</text>
+<line x1="317.6" y1="58" x2="317.6" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="317.6" y="408" text-anchor="middle" fill="#57606a" font-size="10">300 ns</text>
+<line x1="419.7" y1="58" x2="419.7" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="419.7" y="408" text-anchor="middle" fill="#57606a" font-size="10">320 ns</text>
+<line x1="521.8" y1="58" x2="521.8" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="521.8" y="408" text-anchor="middle" fill="#57606a" font-size="10">340 ns</text>
+<line x1="623.8" y1="58" x2="623.8" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="623.8" y="408" text-anchor="middle" fill="#57606a" font-size="10">360 ns</text>
+<line x1="725.9" y1="58" x2="725.9" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="725.9" y="408" text-anchor="middle" fill="#57606a" font-size="10">380 ns</text>
+<line x1="828.0" y1="58" x2="828.0" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="828.0" y="408" text-anchor="middle" fill="#57606a" font-size="10">400 ns</text>
+<line x1="930.1" y1="58" x2="930.1" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="930.1" y="408" text-anchor="middle" fill="#57606a" font-size="10">420 ns</text>
+<line x1="1032.1" y1="58" x2="1032.1" y2="394" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="1032.1" y="408" text-anchor="middle" fill="#57606a" font-size="10">440 ns</text>
+<text x="12" y="86" fill="#57606a" font-weight="bold" font-family="Segoe UI, Helvetica, Arial, sans-serif">write side</text>
+<line x1="12" y1="91" x2="1050" y2="91" stroke="#d0d7de"/>
+<text x="18" y="114" fill="#1f2328">wclk</text>
+<line x1="190" y1="123" x2="1050" y2="123" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,100 215.5,100 215.5,116 215.5,116 241.0,116 241.0,100 241.0,100 266.6,100 266.6,116 266.6,116 292.1,116 292.1,100 292.1,100 317.6,100 317.6,116 317.6,116 343.1,116 343.1,100 343.1,100 368.6,100 368.6,116 368.6,116 394.2,116 394.2,100 394.2,100 419.7,100 419.7,116 419.7,116 445.2,116 445.2,100 445.2,100 470.7,100 470.7,116 470.7,116 496.2,116 496.2,100 496.2,100 521.8,100 521.8,116 521.8,116 547.3,116 547.3,100 547.3,100 572.8,100 572.8,116 572.8,116 598.3,116 598.3,100 598.3,100 623.8,100 623.8,116 623.8,116 649.3,116 649.3,100 649.3,100 674.9,100 674.9,116 674.9,116 700.4,116 700.4,100 700.4,100 725.9,100 725.9,116 725.9,116 751.4,116 751.4,100 751.4,100 776.9,100 776.9,116 776.9,116 802.5,116 802.5,100 802.5,100 828.0,100 828.0,116 828.0,116 853.5,116 853.5,100 853.5,100 879.0,100 879.0,116 879.0,116 904.5,116 904.5,100 904.5,100 930.1,100 930.1,116 930.1,116 955.6,116 955.6,100 955.6,100 981.1,100 981.1,116 981.1,116 1006.6,116 1006.6,100 1006.6,100 1032.1,100 1032.1,116 1032.1,116 1050.0,116" fill="none" stroke="#6e7781" stroke-width="1.4"/>
+<text x="18" y="144" fill="#1f2328">winc</text>
+<line x1="190" y1="153" x2="1050" y2="153" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,146 292.1,146 292.1,130 292.1,130 343.1,130 343.1,146 343.1,146 1050.0,146" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="174" fill="#1f2328">wdata</text>
+<line x1="190" y1="183" x2="1050" y2="183" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,168.0 193.0,160 289.1,160 292.1,168.0 289.1,176 193.0,176" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="241.0" y="172.0" text-anchor="middle" fill="#1f2328">0</text>
+<polygon points="292.1,168.0 295.1,160 1047.0,160 1050.0,168.0 1047.0,176 295.1,176" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="671.0" y="172.0" text-anchor="middle" fill="#1f2328">1</text>
+<text x="18" y="204" fill="#1f2328">wgray</text>
+<line x1="190" y1="213" x2="1050" y2="213" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,198.0 193.0,190 340.1,190 343.1,198.0 340.1,206 193.0,206" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="266.6" y="202.0" text-anchor="middle" fill="#1f2328">1</text>
+<polygon points="343.1,198.0 346.1,190 1047.0,190 1050.0,198.0 1047.0,206 346.1,206" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="696.6" y="202.0" text-anchor="middle" fill="#1f2328">3</text>
+<text x="12" y="236" fill="#57606a" font-weight="bold" font-family="Segoe UI, Helvetica, Arial, sans-serif">read side</text>
+<line x1="12" y1="241" x2="1050" y2="241" stroke="#d0d7de"/>
+<text x="18" y="264" fill="#1f2328">rclk</text>
+<line x1="190" y1="273" x2="1050" y2="273" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,250 210.4,250 210.4,266 210.4,266 279.3,266 279.3,250 279.3,250 348.2,250 348.2,266 348.2,266 417.1,266 417.1,250 417.1,250 486.0,250 486.0,266 486.0,266 554.9,266 554.9,250 554.9,250 623.8,250 623.8,266 623.8,266 692.7,266 692.7,250 692.7,250 761.6,250 761.6,266 761.6,266 830.5,266 830.5,250 830.5,250 899.4,250 899.4,266 899.4,266 968.3,266 968.3,250 968.3,250 1037.2,250 1037.2,266 1037.2,266 1050.0,266" fill="none" stroke="#6e7781" stroke-width="1.4"/>
+<text x="18" y="294" fill="#1f2328">wgray_r (synchronized)</text>
+<line x1="190" y1="303" x2="1050" y2="303" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,288.0 193.0,280 551.9,280 554.9,288.0 551.9,296 193.0,296" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="372.5" y="292.0" text-anchor="middle" fill="#1f2328">1</text>
+<polygon points="554.9,288.0 557.9,280 1047.0,280 1050.0,288.0 1047.0,296 557.9,296" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="802.5" y="292.0" text-anchor="middle" fill="#1f2328">3</text>
+<text x="18" y="324" fill="#1f2328">rempty</text>
+<line x1="190" y1="333" x2="1050" y2="333" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,310 692.7,310 692.7,326 692.7,326 830.5,326 830.5,310 830.5,310 1050.0,310" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="354" fill="#1f2328">rinc</text>
+<line x1="190" y1="363" x2="1050" y2="363" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,340 1050.0,340" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="384" fill="#1f2328">rdata</text>
+<line x1="190" y1="393" x2="1050" y2="393" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,378.0 193.0,370 340.1,370 343.1,378.0 340.1,386 193.0,386" fill="#cf222e" fill-opacity="0.18" stroke="#cf222e" stroke-width="1"/>
+<text x="266.6" y="382.0" text-anchor="middle" fill="#cf222e">X</text>
+<polygon points="343.1,378.0 346.1,370 827.5,370 830.5,378.0 827.5,386 346.1,386" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="586.8" y="382.0" text-anchor="middle" fill="#1f2328">1</text>
+<polygon points="830.5,378.0 833.5,370 1047.0,370 1050.0,378.0 1047.0,386 833.5,386" fill="#cf222e" fill-opacity="0.18" stroke="#cf222e" stroke-width="1"/>
+<text x="940.3" y="382.0" text-anchor="middle" fill="#cf222e">X</text>
+<line x1="343.1" y1="54" x2="343.1" y2="394" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="346.1" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">pointer moves</text>
+<line x1="554.9" y1="54" x2="554.9" y2="394" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="557.9" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">synchronized</text>
+<line x1="692.7" y1="54" x2="692.7" y2="394" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="695.7" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">not empty</text>
+<line x1="343.1" y1="422" x2="692.7" y2="422" stroke="#1a7f37" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="698.7" y="426" text-anchor="start" fill="#1a7f37" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">write to readable: 68.5 ns = 2.5 read clocks</text>
+</svg>

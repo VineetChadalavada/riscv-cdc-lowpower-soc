@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="520" fill="#ffffff"/>
+  <text x="20" y="30" font-size="18" font-weight="bold" fill="#1f2328">async_fifo: how words cross between unrelated clocks</text>
+  <text x="20" y="50" fill="#57606a">Data never goes through a synchronizer. Only the two pointers do, as Gray code, and they decide when the data is safe to read.</text>
+
+  <!-- clock regions -->
+  <rect x="20" y="66" width="480" height="370" fill="#f6f8fa"/>
+  <rect x="500" y="66" width="480" height="370" fill="#fff8f0"/>
+  <line x1="500" y1="66" x2="500" y2="436" stroke="#6e7781" stroke-width="1.5" stroke-dasharray="7,5"/>
+  <text x="36" y="88" font-weight="bold" fill="#57606a">write side: wclk</text>
+  <text x="964" y="88" text-anchor="end" font-weight="bold" fill="#57606a">read side: rclk</text>
+
+  <!-- memory -->
+  <rect x="390" y="104" width="220" height="92" rx="6" fill="#ffffff" stroke="#1f2328" stroke-width="1.5"/>
+  <text x="500" y="128" text-anchor="middle" font-weight="bold" fill="#1f2328">memory: 8 words</text>
+  <text x="500" y="148" text-anchor="middle" fill="#57606a" font-size="11">written on wclk at wbin[2:0]</text>
+  <text x="500" y="164" text-anchor="middle" fill="#57606a" font-size="11">read at rbin[2:0] (first word falls through)</text>
+  <text x="500" y="182" text-anchor="middle" fill="#57606a" font-size="11">a slot is only read after its write has crossed</text>
+
+  <!-- write side blocks -->
+  <text x="36" y="118" fill="#1f2328">winc, wdata</text>
+  <line x1="110" y1="128" x2="388" y2="128" stroke="#57606a" marker-end="url(#arr)"/>
+  <rect x="60" y="140" width="170" height="40" rx="5" fill="#ffffff" stroke="#1f2328"/>
+  <text x="145" y="158" text-anchor="middle" font-weight="bold" fill="#1f2328">wbin (binary)</text>
+  <text x="145" y="173" text-anchor="middle" fill="#57606a" font-size="11">+1 when winc and not full</text>
+  <line x1="230" y1="165" x2="388" y2="165" stroke="#57606a" marker-end="url(#arr)"/>
+  <text x="300" y="159" fill="#57606a" font-size="11">address</text>
+  <line x1="145" y1="180" x2="145" y2="206" stroke="#57606a" marker-end="url(#arr)"/>
+  <rect x="60" y="208" width="170" height="44" rx="5" fill="#ffffff" stroke="#1f2328"/>
+  <text x="145" y="226" text-anchor="middle" font-weight="bold" fill="#1f2328">wgray (register)</text>
+  <text x="145" y="243" text-anchor="middle" fill="#57606a" font-size="11">bin ^ (bin &gt;&gt; 1)</text>
+
+  <rect x="40" y="350" width="220" height="62" rx="5" fill="#ffffff" stroke="#1f2328"/>
+  <text x="150" y="370" text-anchor="middle" font-weight="bold" fill="#1f2328">wfull (register)</text>
+  <text x="150" y="387" text-anchor="middle" fill="#57606a" font-size="11">next wgray == rgray_w with its</text>
+  <text x="150" y="402" text-anchor="middle" fill="#57606a" font-size="11">top two bits inverted</text>
+
+  <!-- read side blocks -->
+  <text x="964" y="118" text-anchor="end" fill="#1f2328">rinc, rdata</text>
+  <line x1="612" y1="128" x2="890" y2="128" stroke="#57606a" marker-end="url(#arr)"/>
+  <rect x="770" y="140" width="170" height="40" rx="5" fill="#ffffff" stroke="#1f2328"/>
+  <text x="855" y="158" text-anchor="middle" font-weight="bold" fill="#1f2328">rbin (binary)</text>
+  <text x="855" y="173" text-anchor="middle" fill="#57606a" font-size="11">+1 when rinc and not empty</text>
+  <line x1="770" y1="165" x2="612" y2="165" stroke="#57606a" marker-end="url(#arr)"/>
+  <text x="660" y="159" fill="#57606a" font-size="11">address</text>
+  <line x1="855" y1="180" x2="855" y2="206" stroke="#57606a" marker-end="url(#arr)"/>
+  <rect x="770" y="208" width="170" height="44" rx="5" fill="#ffffff" stroke="#1f2328"/>
+  <text x="855" y="226" text-anchor="middle" font-weight="bold" fill="#1f2328">rgray (register)</text>
+  <text x="855" y="243" text-anchor="middle" fill="#57606a" font-size="11">bin ^ (bin &gt;&gt; 1)</text>
+
+  <rect x="740" y="350" width="220" height="62" rx="5" fill="#ffffff" stroke="#1f2328"/>
+  <text x="850" y="370" text-anchor="middle" font-weight="bold" fill="#1f2328">rempty (register)</text>
+  <text x="850" y="387" text-anchor="middle" fill="#57606a" font-size="11">next rgray == wgray_r</text>
+
+  <!-- crossing 1: write pointer into rclk -->
+  <path d="M 230 232 L 556 232" stroke="#cf222e" stroke-width="1.5" fill="none" marker-end="url(#arrR)"/>
+  <text x="320" y="226" fill="#cf222e" font-size="11">wgray</text>
+  <circle cx="500" cy="232" r="5" fill="#cf222e"/>
+  <rect x="558" y="218" width="110" height="30" rx="4" fill="#ffffff" stroke="#cf222e"/>
+  <text x="613" y="238" text-anchor="middle" fill="#1f2328">sync_2ff (rclk)</text>
+  <path d="M 668 233 L 710 233 L 710 381 L 738 381" stroke="#57606a" fill="none" marker-end="url(#arr)"/>
+  <text x="716" y="336" fill="#57606a" font-size="11">wgray_r</text>
+
+  <!-- crossing 2: read pointer into wclk -->
+  <path d="M 855 252 L 855 300 L 444 300" stroke="#cf222e" stroke-width="1.5" fill="none" marker-end="url(#arrR)"/>
+  <text x="620" y="294" fill="#cf222e" font-size="11">rgray</text>
+  <circle cx="500" cy="300" r="5" fill="#cf222e"/>
+  <rect x="332" y="286" width="110" height="30" rx="4" fill="#ffffff" stroke="#cf222e"/>
+  <text x="387" y="306" text-anchor="middle" fill="#1f2328">sync_2ff (wclk)</text>
+  <path d="M 332 301 L 290 301 L 290 381 L 262 381" stroke="#57606a" fill="none" marker-end="url(#arr)"/>
+  <text x="222" y="330" fill="#57606a" font-size="11">rgray_w</text>
+
+  <!-- notes -->
+  <text x="20" y="462" font-weight="bold" fill="#1f2328">Why it is safe</text>
+  <text x="20" y="482" fill="#57606a">• Gray code changes one bit per step, so a synchronizer that samples mid-change sees the old pointer or the new one, never a mix.</text>
+  <text x="20" y="500" fill="#57606a">• Each side sees the other's pointer 2-3 clocks late, so it can only think the FIFO is fuller (writer) or emptier (reader) than it is. That costs latency, never data.</text>
+  <text x="20" y="518" fill="#57606a">• Pointers have one more bit than the address: equal means empty, equal except the top bit means full.</text>
+</svg>

@@ -1,0 +1,84 @@
+# minisoc -- power intent, IEEE 1801 (UPF 2.1).
+#
+# Two domains:
+#   PD_AON   everything, always powered from VDD
+#   PD_CORE  the core (u_core_pd/u_core), powered from VDD_CORE, which a
+#            power switch connects to VDD under control of the PMU
+#
+# HOW THIS RELATES TO THE RTL
+# In a full flow, synthesis reads this file and inserts the isolation cells
+# itself. Here they are already written in the RTL (iso_clamp0 in
+# core_pd.v), so that ordinary simulation -- which cannot read UPF -- still
+# exercises them. The isolation strategy below therefore points at those
+# existing cells (-location parent, controlled by the PMU's iso_en) rather
+# than asking for new ones; a synthesis flow would map iso_clamp0 onto the
+# library's isolation cell (map_isolation_cell / use_interface_cell).
+#
+# NOT CHECKED BY A TOOL. There is no free UPF-aware simulator or checker
+# (the real ones are Synopsys VCS NLP, Siemens Questa PA, Cadence Conformal
+# Low Power). The behaviour it describes IS checked, in RTL simulation, by
+# dv/tb_power.sv: the power switch and state loss are modelled in core_pd.v,
+# and every sequencing rule is an assertion.
+
+set_design_top minisoc_top
+
+# ---------------------------------------------------------------------------
+# Supplies
+# ---------------------------------------------------------------------------
+create_supply_port VDD
+create_supply_port VSS
+create_supply_net  VDD
+create_supply_net  VSS
+create_supply_net  VDD_CORE
+connect_supply_net VDD -ports VDD
+connect_supply_net VSS -ports VSS
+
+# ---------------------------------------------------------------------------
+# Power domains
+# ---------------------------------------------------------------------------
+create_power_domain PD_AON  -include_scope
+create_power_domain PD_CORE -elements {u_core_pd/u_core}
+
+create_supply_set SS_AON  -function {power VDD}      -function {ground VSS}
+create_supply_set SS_CORE -function {power VDD_CORE} -function {ground VSS}
+associate_supply_set SS_AON  -handle PD_AON.primary
+associate_supply_set SS_CORE -handle PD_CORE.primary
+
+# ---------------------------------------------------------------------------
+# Power switch: VDD -> VDD_CORE, on while the PMU's pwr_on is high
+# ---------------------------------------------------------------------------
+create_power_switch SW_CORE -domain PD_CORE \
+    -input_supply_port  {vin  VDD} \
+    -output_supply_port {vout VDD_CORE} \
+    -control_port       {ctrl u_pmu/pwr_on} \
+    -on_state           {on_state  vin {ctrl}} \
+    -off_state          {off_state {!ctrl}}
+
+# ---------------------------------------------------------------------------
+# Isolation: every output of PD_CORE clamped to 0 while iso_en is high.
+# The cells sit in the parent (always-on) domain and are powered from VDD,
+# so they keep working while PD_CORE is off.
+# ---------------------------------------------------------------------------
+set_isolation ISO_CORE -domain PD_CORE \
+    -applies_to outputs \
+    -clamp_value 0 \
+    -isolation_supply_set SS_AON \
+    -isolation_signal u_pmu/iso_en \
+    -isolation_sense high \
+    -location parent
+
+# No retention: the core reboots on wake-up, and its program lives in the
+# always-on RAM. (Retention registers would keep the core's state instead,
+# at the cost of a balloon latch per flop and a save/restore sequence.)
+
+# No level shifters: both domains run from the same voltage.
+
+# ---------------------------------------------------------------------------
+# Legal power states
+# ---------------------------------------------------------------------------
+add_power_state PD_CORE.primary \
+    -state ON  {-supply_expr {power == `{FULL_ON, 1.2}}} \
+    -state OFF {-supply_expr {power == `{OFF}}}
+
+add_power_state PD_AON.primary \
+    -state ON  {-supply_expr {power == `{FULL_ON, 1.2}}}

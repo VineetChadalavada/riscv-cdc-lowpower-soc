@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="294" viewBox="0 0 1070 294" font-family="Consolas, Menlo, monospace" font-size="12">
+<rect width="1070" height="294" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker></defs>
+<text x="12" y="22" font-size="15" font-weight="bold" fill="#1f2328" font-family="Segoe UI, Helvetica, Arial, sans-serif">The timer interrupt crossing into the core&#x27;s clock domain</text>
+<text x="12" y="40" font-size="12" fill="#57606a" font-family="Segoe UI, Helvetica, Arial, sans-serif">From tb_minisoc: irq is a level from a flop in clk_periph; two flops in clk_core make it safe to use; the core then jumps to the handler at 0x100.</text>
+<line x1="240.9" y1="58" x2="240.9" y2="244" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="240.9" y="258" text-anchor="middle" fill="#57606a" font-size="10">9360 ns</text>
+<line x1="360.8" y1="58" x2="360.8" y2="244" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="360.8" y="258" text-anchor="middle" fill="#57606a" font-size="10">9380 ns</text>
+<line x1="480.7" y1="58" x2="480.7" y2="244" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="480.7" y="258" text-anchor="middle" fill="#57606a" font-size="10">9400 ns</text>
+<line x1="600.5" y1="58" x2="600.5" y2="244" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="600.5" y="258" text-anchor="middle" fill="#57606a" font-size="10">9420 ns</text>
+<line x1="720.4" y1="58" x2="720.4" y2="244" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="720.4" y="258" text-anchor="middle" fill="#57606a" font-size="10">9440 ns</text>
+<line x1="840.2" y1="58" x2="840.2" y2="244" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="840.2" y="258" text-anchor="middle" fill="#57606a" font-size="10">9460 ns</text>
+<line x1="960.1" y1="58" x2="960.1" y2="244" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="960.1" y="258" text-anchor="middle" fill="#57606a" font-size="10">9480 ns</text>
+<text x="18" y="84" fill="#1f2328">clk_periph</text>
+<line x1="190" y1="93" x2="1050" y2="93" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,86 267.9,86 267.9,70 267.9,70 348.8,70 348.8,86 348.8,86 429.7,86 429.7,70 429.7,70 510.6,70 510.6,86 510.6,86 591.5,86 591.5,70 591.5,70 672.4,70 672.4,86 672.4,86 753.3,86 753.3,70 753.3,70 834.3,70 834.3,86 834.3,86 915.2,86 915.2,70 915.2,70 996.1,70 996.1,86 996.1,86 1050.0,86" fill="none" stroke="#6e7781" stroke-width="1.4"/>
+<text x="18" y="114" fill="#1f2328">timer irq</text>
+<line x1="190" y1="123" x2="1050" y2="123" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,116 429.7,116 429.7,100 429.7,100 1050.0,100" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="144" fill="#1f2328">clk_core</text>
+<line x1="190" y1="153" x2="1050" y2="153" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,146 211.0,146 211.0,130 211.0,130 240.9,130 240.9,146 240.9,146 270.9,146 270.9,130 270.9,130 300.9,130 300.9,146 300.9,146 330.8,146 330.8,130 330.8,130 360.8,130 360.8,146 360.8,146 390.8,146 390.8,130 390.8,130 420.7,130 420.7,146 420.7,146 450.7,146 450.7,130 450.7,130 480.7,130 480.7,146 480.7,146 510.6,146 510.6,130 510.6,130 540.6,130 540.6,146 540.6,146 570.6,146 570.6,130 570.6,130 600.5,130 600.5,146 600.5,146 630.5,146 630.5,130 630.5,130 660.5,130 660.5,146 660.5,146 690.4,146 690.4,130 690.4,130 720.4,130 720.4,146 720.4,146 750.3,146 750.3,130 750.3,130 780.3,130 780.3,146 780.3,146 810.3,146 810.3,130 810.3,130 840.2,130 840.2,146 840.2,146 870.2,146 870.2,130 870.2,130 900.2,130 900.2,146 900.2,146 930.1,146 930.1,130 930.1,130 960.1,130 960.1,146 960.1,146 990.1,146 990.1,130 990.1,130 1020.0,130 1020.0,146 1020.0,146 1050.0,146" fill="none" stroke="#6e7781" stroke-width="1.4"/>
+<text x="18" y="174" fill="#1f2328">sync stage 1</text>
+<line x1="190" y1="183" x2="1050" y2="183" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,176 450.7,176 450.7,160 450.7,160 1050.0,160" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="204" fill="#1f2328">irq_timer_core</text>
+<line x1="190" y1="213" x2="1050" y2="213" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,206 510.6,206 510.6,190 510.6,190 1050.0,190" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="234" fill="#1f2328">fetch address</text>
+<line x1="190" y1="243" x2="1050" y2="243" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,228.0 193.0,220 267.9,220 270.9,228.0 267.9,236 193.0,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="230.5" y="232.0" text-anchor="middle" fill="#1f2328">74</text>
+<polygon points="270.9,228.0 273.9,220 387.8,220 390.8,228.0 387.8,236 273.9,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="330.8" y="232.0" text-anchor="middle" fill="#1f2328">78</text>
+<polygon points="390.8,228.0 393.8,220 507.6,220 510.6,228.0 507.6,236 393.8,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="450.7" y="232.0" text-anchor="middle" fill="#1f2328">74</text>
+<polygon points="510.6,228.0 513.6,220 627.5,220 630.5,228.0 627.5,236 513.6,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="570.6" y="232.0" text-anchor="middle" fill="#1f2328">78</text>
+<polygon points="630.5,228.0 633.5,220 687.4,220 690.4,228.0 687.4,236 633.5,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="660.5" y="232.0" text-anchor="middle" fill="#1f2328">74</text>
+<polygon points="690.4,228.0 693.4,220 807.3,220 810.3,228.0 807.3,236 693.4,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="750.3" y="232.0" text-anchor="middle" fill="#1f2328">100</text>
+<polygon points="810.3,228.0 813.3,220 927.1,220 930.1,228.0 927.1,236 813.3,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="870.2" y="232.0" text-anchor="middle" fill="#1f2328">104</text>
+<polygon points="930.1,228.0 933.1,220 987.1,220 990.1,228.0 987.1,236 933.1,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="960.1" y="232.0" text-anchor="middle" fill="#1f2328">108</text>
+<polygon points="990.1,228.0 993.1,220 1047.0,220 1050.0,228.0 1047.0,236 993.1,236" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="1020.0" y="232.0" text-anchor="middle" fill="#1f2328">104</text>
+<line x1="429.7" y1="54" x2="429.7" y2="244" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="432.7" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">irq raised</text>
+<line x1="510.6" y1="54" x2="510.6" y2="244" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="513.6" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">seen by core</text>
+<line x1="690.4" y1="54" x2="690.4" y2="244" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="693.4" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">handler fetched</text>
+<line x1="429.7" y1="272" x2="510.6" y2="272" stroke="#1a7f37" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="516.6" y="276" text-anchor="start" fill="#1a7f37" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">synchronizer: 14 ns</text>
+</svg>

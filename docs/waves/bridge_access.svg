@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="564" viewBox="0 0 1070 564" font-family="Consolas, Menlo, monospace" font-size="12">
+<rect width="1070" height="564" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker></defs>
+<text x="12" y="22" font-size="15" font-weight="bold" fill="#1f2328" font-family="Segoe UI, Helvetica, Arial, sans-serif">One store from the core to the UART, across the clock domains</text>
+<text x="12" y="40" font-size="12" fill="#57606a" font-family="Segoe UI, Helvetica, Arial, sans-serif">From tb_minisoc: a store to 0x1000_0008 (UART divisor). Request FIFO -&gt; APB SETUP/ACCESS -&gt; response FIFO -&gt; core.</text>
+<line x1="203.9" y1="58" x2="203.9" y2="514" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="203.9" y="528" text-anchor="middle" fill="#57606a" font-size="10">200 ns</text>
+<line x1="342.6" y1="58" x2="342.6" y2="514" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="342.6" y="528" text-anchor="middle" fill="#57606a" font-size="10">250 ns</text>
+<line x1="481.3" y1="58" x2="481.3" y2="514" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="481.3" y="528" text-anchor="middle" fill="#57606a" font-size="10">300 ns</text>
+<line x1="620.0" y1="58" x2="620.0" y2="514" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="620.0" y="528" text-anchor="middle" fill="#57606a" font-size="10">350 ns</text>
+<line x1="758.7" y1="58" x2="758.7" y2="514" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="758.7" y="528" text-anchor="middle" fill="#57606a" font-size="10">400 ns</text>
+<line x1="897.4" y1="58" x2="897.4" y2="514" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="897.4" y="528" text-anchor="middle" fill="#57606a" font-size="10">450 ns</text>
+<line x1="1036.1" y1="58" x2="1036.1" y2="514" stroke="#d0d7de" stroke-width="0.6"/>
+<text x="1036.1" y="528" text-anchor="middle" fill="#57606a" font-size="10">500 ns</text>
+<text x="12" y="86" fill="#57606a" font-weight="bold" font-family="Segoe UI, Helvetica, Arial, sans-serif">core (clk_core, 10 ns)</text>
+<line x1="12" y1="91" x2="1050" y2="91" stroke="#d0d7de"/>
+<text x="18" y="114" fill="#1f2328">clk_core</text>
+<line x1="190" y1="123" x2="1050" y2="123" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,100 203.9,100 203.9,116 203.9,116 217.7,116 217.7,100 217.7,100 231.6,100 231.6,116 231.6,116 245.5,116 245.5,100 245.5,100 259.4,100 259.4,116 259.4,116 273.2,116 273.2,100 273.2,100 287.1,100 287.1,116 287.1,116 301.0,116 301.0,100 301.0,100 314.8,100 314.8,116 314.8,116 328.7,116 328.7,100 328.7,100 342.6,100 342.6,116 342.6,116 356.5,116 356.5,100 356.5,100 370.3,100 370.3,116 370.3,116 384.2,116 384.2,100 384.2,100 398.1,100 398.1,116 398.1,116 411.9,116 411.9,100 411.9,100 425.8,100 425.8,116 425.8,116 439.7,116 439.7,100 439.7,100 453.5,100 453.5,116 453.5,116 467.4,116 467.4,100 467.4,100 481.3,100 481.3,116 481.3,116 495.2,116 495.2,100 495.2,100 509.0,100 509.0,116 509.0,116 522.9,116 522.9,100 522.9,100 536.8,100 536.8,116 536.8,116 550.6,116 550.6,100 550.6,100 564.5,100 564.5,116 564.5,116 578.4,116 578.4,100 578.4,100 592.3,100 592.3,116 592.3,116 606.1,116 606.1,100 606.1,100 620.0,100 620.0,116 620.0,116 633.9,116 633.9,100 633.9,100 647.7,100 647.7,116 647.7,116 661.6,116 661.6,100 661.6,100 675.5,100 675.5,116 675.5,116 689.4,116 689.4,100 689.4,100 703.2,100 703.2,116 703.2,116 717.1,116 717.1,100 717.1,100 731.0,100 731.0,116 731.0,116 744.8,116 744.8,100 744.8,100 758.7,100 758.7,116 758.7,116 772.6,116 772.6,100 772.6,100 786.5,100 786.5,116 786.5,116 800.3,116 800.3,100 800.3,100 814.2,100 814.2,116 814.2,116 828.1,116 828.1,100 828.1,100 841.9,100 841.9,116 841.9,116 855.8,116 855.8,100 855.8,100 869.7,100 869.7,116 869.7,116 883.5,116 883.5,100 883.5,100 897.4,100 897.4,116 897.4,116 911.3,116 911.3,100 911.3,100 925.2,100 925.2,116 925.2,116 939.0,116 939.0,100 939.0,100 952.9,100 952.9,116 952.9,116 966.8,116 966.8,100 966.8,100 980.6,100 980.6,116 980.6,116 994.5,116 994.5,100 994.5,100 1008.4,100 1008.4,116 1008.4,116 1022.3,116 1022.3,100 1022.3,100 1036.1,100 1036.1,116 1036.1,116 1050.0,116" fill="none" stroke="#6e7781" stroke-width="1.4"/>
+<text x="18" y="144" fill="#1f2328">dmem_valid</text>
+<line x1="190" y1="153" x2="1050" y2="153" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,146 301.0,146 301.0,130 301.0,130 966.8,130 966.8,146 966.8,146 1050.0,146" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="174" fill="#1f2328">dmem_addr</text>
+<line x1="190" y1="183" x2="1050" y2="183" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,168.0 193.0,160 298.0,160 301.0,168.0 298.0,176 193.0,176" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="245.5" y="172.0" text-anchor="middle" fill="#1f2328">0</text>
+<polygon points="301.0,168.0 304.0,160 991.5,160 994.5,168.0 991.5,176 304.0,176" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="647.7" y="172.0" text-anchor="middle" fill="#1f2328">10000008</text>
+<polygon points="994.5,168.0 997.5,160 1047.0,160 1050.0,168.0 1047.0,176 997.5,176" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="1022.3" y="172.0" text-anchor="middle" fill="#1f2328">48</text>
+<text x="18" y="204" fill="#1f2328">req_push</text>
+<line x1="190" y1="213" x2="1050" y2="213" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,206 301.0,206 301.0,190 301.0,190 328.7,190 328.7,206 328.7,206 1050.0,206" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="234" fill="#1f2328">rsp_pop</text>
+<line x1="190" y1="243" x2="1050" y2="243" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,236 911.3,236 911.3,220 911.3,220 939.0,220 939.0,236 939.0,236 1050.0,236" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="264" fill="#1f2328">dmem_ready</text>
+<line x1="190" y1="273" x2="1050" y2="273" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,266 939.0,266 939.0,250 939.0,250 966.8,250 966.8,266 966.8,266 1050.0,266" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="12" y="296" fill="#57606a" font-weight="bold" font-family="Segoe UI, Helvetica, Arial, sans-serif">APB (clk_periph, 27 ns)</text>
+<line x1="12" y1="301" x2="1050" y2="301" stroke="#d0d7de"/>
+<text x="18" y="324" fill="#1f2328">clk_periph</text>
+<line x1="190" y1="333" x2="1050" y2="333" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,310 198.3,310 198.3,326 198.3,326 235.8,326 235.8,310 235.8,310 273.2,310 273.2,326 273.2,326 310.7,326 310.7,310 310.7,310 348.1,310 348.1,326 348.1,326 385.6,326 385.6,310 385.6,310 423.0,310 423.0,326 423.0,326 460.5,326 460.5,310 460.5,310 497.9,310 497.9,326 497.9,326 535.4,326 535.4,310 535.4,310 572.8,310 572.8,326 572.8,326 610.3,326 610.3,310 610.3,310 647.7,310 647.7,326 647.7,326 685.2,326 685.2,310 685.2,310 722.6,310 722.6,326 722.6,326 760.1,326 760.1,310 760.1,310 797.5,310 797.5,326 797.5,326 835.0,326 835.0,310 835.0,310 872.5,310 872.5,326 872.5,326 909.9,326 909.9,310 909.9,310 947.4,310 947.4,326 947.4,326 984.8,326 984.8,310 984.8,310 1022.3,310 1022.3,326 1022.3,326 1050.0,326" fill="none" stroke="#6e7781" stroke-width="1.4"/>
+<text x="18" y="354" fill="#1f2328">bridge state</text>
+<line x1="190" y1="363" x2="1050" y2="363" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,348.0 193.0,340 607.3,340 610.3,348.0 607.3,356 193.0,356" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="400.1" y="352.0" text-anchor="middle" fill="#1f2328">IDLE</text>
+<polygon points="610.3,348.0 613.3,340 682.2,340 685.2,348.0 682.2,356 613.3,356" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="647.7" y="352.0" text-anchor="middle" fill="#1f2328">SETUP</text>
+<polygon points="685.2,348.0 688.2,340 757.1,340 760.1,348.0 757.1,356 688.2,356" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="722.6" y="352.0" text-anchor="middle" fill="#1f2328">ACCESS</text>
+<polygon points="760.1,348.0 763.1,340 1047.0,340 1050.0,348.0 1047.0,356 763.1,356" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="905.0" y="352.0" text-anchor="middle" fill="#1f2328">IDLE</text>
+<text x="18" y="384" fill="#1f2328">psel</text>
+<line x1="190" y1="393" x2="1050" y2="393" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,386 610.3,386 610.3,370 610.3,370 760.1,370 760.1,386 760.1,386 1050.0,386" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="414" fill="#1f2328">penable</text>
+<line x1="190" y1="423" x2="1050" y2="423" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,416 685.2,416 685.2,400 685.2,400 760.1,400 760.1,416 760.1,416 1050.0,416" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<text x="18" y="444" fill="#1f2328">paddr</text>
+<line x1="190" y1="453" x2="1050" y2="453" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,438.0 193.0,430 607.3,430 610.3,438.0 607.3,446 193.0,446" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="400.1" y="442.0" text-anchor="middle" fill="#1f2328">0</text>
+<polygon points="610.3,438.0 613.3,430 1047.0,430 1050.0,438.0 1047.0,446 613.3,446" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="830.1" y="442.0" text-anchor="middle" fill="#1f2328">8</text>
+<text x="18" y="474" fill="#1f2328">pwdata</text>
+<line x1="190" y1="483" x2="1050" y2="483" stroke="#eaeef2" stroke-width="1"/>
+<polygon points="190.0,468.0 193.0,460 607.3,460 610.3,468.0 607.3,476 193.0,476" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="400.1" y="472.0" text-anchor="middle" fill="#1f2328">0</text>
+<polygon points="610.3,468.0 613.3,460 1047.0,460 1050.0,468.0 1047.0,476 613.3,476" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-width="1"/>
+<text x="830.1" y="472.0" text-anchor="middle" fill="#1f2328">3</text>
+<text x="18" y="504" fill="#1f2328">pready</text>
+<line x1="190" y1="513" x2="1050" y2="513" stroke="#eaeef2" stroke-width="1"/>
+<polyline points="190.0,490 1050.0,490" fill="none" stroke="#0969da" stroke-width="1.4"/>
+<line x1="301.0" y1="54" x2="301.0" y2="514" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="304.0" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">request pushed</text>
+<line x1="610.3" y1="54" x2="610.3" y2="514" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="613.3" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">APB starts</text>
+<line x1="939.0" y1="54" x2="939.0" y2="514" stroke="#8250df" stroke-width="1.2" stroke-dasharray="4,3"/>
+<text x="942.0" y="52" fill="#8250df" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">core released</text>
+<line x1="301.0" y1="542" x2="939.0" y2="542" stroke="#1a7f37" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="295.0" y="546" text-anchor="end" fill="#1a7f37" font-size="11" font-family="Segoe UI, Helvetica, Arial, sans-serif">core waits 23 core cycles</text>
+</svg>
